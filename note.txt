@@ -1,0 +1,38 @@
+Vue MultiSelect 
+
+source link: https://github.com/SuadeLabs/vue3-multiselect
+video Link: https://www.youtube.com/watch?v=8V-dEk1TqIg
+
+=======================@@ install process @@================================
+
+command: npm install @suadelabs/vue3-multiselect
+
+Then app.js or main.js File Configure system  
+
+import 'vue-multiselect/dist/vue-multiselect.min.css'
+import Multiselect from '@suadelabs/vue3-multiselect'
+app.component('multi-select', Multiselect)
+
+Then Category.vue file using system 
+
+         <multi-select 
+          v-model="value" :options="options" :multiple="true" :custom-label="nameWithLang" placeholder="Please Select one" label="name" track-by="name"
+          ></multi-select>
+
+
+<script>
+export default {
+  data() {
+    return {
+      value: null,
+      options: [
+        { name: 'Vue.js', language: 'JavaScript' },
+        { name: 'Rails', language: 'Ruby' },
+        { name: 'Sinatra', language: 'Ruby' },
+        { name: 'Laravel', language: 'PHP' },
+        { name: 'Phoenix', language: 'Elixir' }
+      ]
+    }
+  }
+}
+</script>

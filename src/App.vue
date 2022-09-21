@@ -1,4 +1,6 @@
 <template>
+
+
   <div>
     <div class="container mt-5">
       <div class="col-md-12">
@@ -8,7 +10,6 @@
 
           <PostComponent></PostComponent>
 
-         
 
         </div>
       </div>
@@ -24,10 +25,11 @@ import CategoryComponent from './components/Category-Component.vue'
 import PostComponent from './components/Post-Component.vue'
 
 
+
 export default {
   components: {
     CategoryComponent,
-    PostComponent
+    PostComponent,
   }
 
 }

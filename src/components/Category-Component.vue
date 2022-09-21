@@ -36,6 +36,20 @@
         </ul>
 
         <button @click="checkAction">Check Action</button>
+        <br />
+        <br />
+        <br />
+
+        <div>
+          <label for="">Multi Select </label>
+          <multi-select 
+          v-model="value" :options="options" :multiple="true" :custom-label="nameWithLang" placeholder="Please Select one" label="name" track-by="name"
+
+          
+          
+          ></multi-select>
+        </div>
+
       </div>
     </div>
   </div>
@@ -47,6 +61,14 @@ export default {
   data() {
     return {
       category: "",
+      value: null,
+      options: [
+        { name: 'Vue.js', language: 'JavaScript' },
+        { name: 'Rails', language: 'Ruby' },
+        { name: 'Sinatra', language: 'Ruby' },
+        { name: 'Laravel', language: 'PHP' },
+        { name: 'Phoenix', language: 'Elixir' }
+      ]
     };
   },
 
